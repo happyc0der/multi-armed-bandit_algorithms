@@ -82,9 +82,11 @@ class obj:
 # a = 2
 # print(a**2)
 # print(a)
-import random
-import numpy as np
-Upper = 100
+# import random
+# import numpy as np
+# Upper = 100
 
+print(bin(10))
+# one hot encode
 
 

@@ -68,3 +68,13 @@ for i in range(2000):
 
     #update that distributions posterior
     R[chosen_idx].update_current_distribution()
+
+
+plt.figure(figsize=(5, 5))
+true_means = [r.mu for r in R]
+posterior_means = [r.post_mu_of_mu for r in R]
+plt.scatter(true_means, posterior_means)
+plt.plot(true_means, true_means, color='k', alpha=0.5, linestyle='--')
+
+plt.xlabel('True Mean', fontsize=20)
+plt.ylabel('Posterior Mean', fontsize=20)
