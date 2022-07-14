@@ -110,6 +110,5 @@ import numpy as np
 theta = np.random.beta(1,1)
 
 print(theta)            
-for i in range(100):
-    print(i)
-print("testing whether I can push to main branch or not")
+
+# remember golden rule first commit then push immediately to reflect change on the repo
