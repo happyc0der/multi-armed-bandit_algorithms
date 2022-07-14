@@ -26,7 +26,8 @@ class RestaurantThompsonSampler(restaurant):
         
     def get_mu_from_current_distribution(self):
         samp_mu = np.random.normal(self.post_mu_of_mu, self.post_sigma_of_mu)
-        return samp_mu
+        # find the variance
+        
 
     def update_current_distribution(self):
         self.post_sigma_of_mu = np.sqrt(
@@ -38,7 +39,6 @@ class RestaurantThompsonSampler(restaurant):
 def draw_distributions(R,i):
     for r in R:
         samps = np.random.normal(r.post_mu_of_mu, r.post_sigma_of_mu, 10000)
-        sns.kdeplot(samps, shade=True)
     plt.title('Iteration %s'%(i+1), fontsize=20)
     plt.legend(['mu=%s'%(r.mu) for r in R], fontsize=16)
     plt.xlim(-10,10)
@@ -59,7 +59,7 @@ for i in range(2000):
 
     #get a sample from each posterior
     post_samps = [r.get_mu_from_current_distribution() for r in R]
-
+    
     #index of distribution with highest satisfaction
     chosen_idx = post_samps.index(max(post_samps))
 

@@ -86,7 +86,28 @@ class obj:
 # import numpy as np
 # Upper = 100
 
-print(bin(10))
-# one hot encode
+# print(bin(10))
+# # one hot encode
 
+# K = 2
+# while (~(K and ~(K & (K-1)))):
+#     K += 1
+# print(K)
 
+# lst = [i+1 for i in range(1024)]
+# for i in range(0,1024,32):
+#     print(lst[i])
+    
+k = 2
+number = 3
+# detect whether number has 1 on it's kth place or not
+if (number & (1<<k)):
+    print(number, "has 1 on it's", k, "th place")
+    print("Yes")
+else :
+    print("No")
+import numpy as np
+theta = np.random.beta(1,1)
+
+print(theta)            
+   
