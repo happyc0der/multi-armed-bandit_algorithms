@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-# import seaborn as sns 
+import seaborn as sns 
 class restaurant:
     def __init__(self,mu,sigma):
         self.mu = mu
